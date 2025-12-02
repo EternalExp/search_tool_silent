@@ -103,6 +103,12 @@ LRESULT CALLBACK EditProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam, UI
             }
             break;
         }
+        case WM_CHAR: {
+            if (wParam == VK_RETURN) {
+                return 0;
+            }
+            break;
+        }
     }
     return DefSubclassProc(hwnd, uMsg, wParam, lParam);
 }
